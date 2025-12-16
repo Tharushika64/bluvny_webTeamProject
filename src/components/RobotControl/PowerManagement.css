@@ -1,0 +1,112 @@
+.power-management .power-status-section,
+.power-management .operation-section {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.power-management h3 {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  margin: 0 0 8px 0;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.status-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.status-light.online {
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+.status-light.offline {
+  background: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+}
+
+.status-text {
+  font-weight: 600;
+  color: #333;
+}
+
+.power-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.power-toggle-btn,
+.operation-btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.power-toggle-btn {
+  background: linear-gradient(180deg, #2b67f6 0%, #1b5de6 100%);
+  color: rgb(255, 255, 255);
+  width: 220px;
+  align-self: center;
+  padding: 10px 18px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(43, 103, 246, 0.12);
+}
+
+.power-toggle-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.operation-btn {
+  background: transparent;
+  color: #2b67f6;
+  border: 2px dashed #d6e9ff;
+  padding: 9px 14px;
+  width: 220px;
+  align-self: center;
+  border-radius: 8px;
+}
+
+.operation-btn:hover {
+  background: #fdfdfd;
+  transform: translateY(-2px);
+}
+
+/* Green status box */
+.status-card {
+  background: #eafbf0;
+  border: 1px solid #07e76c;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.status-card .status-icon {
+  background: #0f6b3a;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}

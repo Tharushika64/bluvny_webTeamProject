@@ -1,0 +1,78 @@
+
+.settings-grid {
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.setting-item {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:14px;
+  background:#f2f2f5;
+  border-radius:12px;
+  border:1px solid rgba(15,23,42,0.03);
+}
+
+.setting-header{ display:flex; flex-direction:column }
+
+.setting-header strong{ font-size:14px; color:#0f1724 }
+
+.setting-description{ font-size:12px; color:#6b7280 }
+
+.threshold-input {
+  width:56px;
+  padding:6px 8px;
+  border-radius:8px;
+  border:1px solid #e6e9ee;
+  text-align:center;
+  background:#fff;
+}
+
+/* Switch styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 24px;
+}
+
+.slider:before {
+  position:absolute;
+  content:"";
+  height:18px;
+  width:18px;
+  left:4px;
+  bottom:3px;
+  background:#fff;
+  transition:.4s;
+  border-radius:50%;
+  box-shadow:0 1px 2px rgba(0,0,0,0.08);
+}
+
+input:checked + .slider {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}

@@ -1,0 +1,57 @@
+.control-panel {
+  background: transparent;
+}
+
+.panel-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(360px, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 8px 20px rgba(15, 23, 36, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.04);
+}
+
+.card h2 {
+  color: #13304a;
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.section-subtitle {
+  color: #6b7280;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+/* make all cards the same height */
+.power-management { min-height: 380px }
+.operation-mode { min-height: 380px }
+
+/* make bottom cards visually distinct with blue outline like the mock */
+.robot-settings, .directional-controls {
+  min-height: 380px;
+  border: 1px solid rgba(43,103,246,0.18);
+  box-shadow: 0 6px 14px rgba(15,23,42,0.03);
+}
+
+/* Card header band (top light-blue strip) */
+.card-header{
+  background: #eaf2ff;
+  padding: 14px 18px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  margin: -18px -18px 12px -18px;
+  box-shadow: 0 2px 0 rgba(15,23,42,0.04) inset;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+}
+
+.card-header h2{ color:#2b67f6; font-size:1.05rem; margin:0 }
+.card-header .section-subtitle{ color:#6b7280; font-size:0.85rem; margin:4px 0 0 }
+
+.card .power-body, .card .mode-body{ padding: 14px 10px 12px 10px }

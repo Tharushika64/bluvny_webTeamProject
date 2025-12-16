@@ -1,0 +1,87 @@
+
+.mode-selector {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.mode-option {
+  width: 130px;
+  height: 130px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:16px;
+  background: #ffffff;
+  border-radius:12px;
+  cursor:pointer;
+  transition: all .2s ease;
+  border:2px solid #2b67f6;
+  box-shadow: 0 6px 14px rgba(15,23,42,0.03);
+}
+
+
+.mode-option.selected {
+  border-color: #2b67f6;
+  background: linear-gradient(180deg,#f0f6ff 0%,#ffffff 100%);
+}
+
+.mode-icon {
+  width: 50px;;
+  height:50px;
+  border-radius:10px;
+  background:#2b67f6;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  color:#fff;
+  border:none;
+}
+
+.mode-option .mode-subtitle{ opacity:0.85 }
+
+.mode-name{
+  font-size:13px;
+  color:#4d4f50;
+  font-weight:600;
+  margin-top:6px;
+}
+
+.mode-subtitle{
+  font-size:11px;
+  color:#6b7280;
+  margin-top:4px;
+}
+
+.mode-content {
+  flex: 1;
+}
+
+.mode-content h3 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.mode-content p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.mode-selector-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #395eb3;
+  color: white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:12px;
+}
