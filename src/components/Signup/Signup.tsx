@@ -1,9 +1,7 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Signup.css";
 import robotImg from "../../assets/images/robot.png";
-
-
-
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +9,8 @@ const Signup = () => {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -23,6 +23,7 @@ const Signup = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
+    navigate("/dashboard"); // Navigate to the Dashboard page
   };
 
   return (
@@ -61,11 +62,10 @@ const Signup = () => {
 
       <div className="signup-image">
         <img
-  src={robotImg}
-  alt="Robot"
-  className="robot-img"
-/>
-
+          src={robotImg}
+          alt="Robot"
+          className="robot-img"
+        />
       </div>
     </div>
   );
