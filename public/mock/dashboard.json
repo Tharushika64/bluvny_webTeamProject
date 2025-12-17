@@ -1,0 +1,30 @@
+{
+  "topCards": [
+    {"title":"Robot Status","subtitle":"Last updated: Just now","value":"Working","details":"","color":"#87AAFE","icon":"🤖"},
+    {"title":"Battery Level","subtitle":"","value":"62%","color":"#67CF36","icon":"🔋"},
+    {"title":"Garbage Level","subtitle":"","value":"57%","color":"#FF7272","icon":"🗑️"},
+    {"title":"Location","subtitle":"Zone A","value":"Negombo Beach","color":"#FF6B00","icon":"📍"},
+    {"title":"Operation Mode","subtitle":"","value":"Autonomous","color":"#AC72A1","icon":"⚙️"}
+  ],
+  "hourlyActivity": {
+    "today": {
+      "labels": ["8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00"],
+      "values": [30,25,60,55,50,45,40,70,80]
+    },
+    "last7": {
+      "labels": ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"],
+      "values": [45,50,38,60,55,48,70]
+    }
+  },
+  "today": {
+    "areasCovered": "6 Zone",
+    "distanceTraveled": "3.2 km",
+    "operationTime": "4h 35m",
+    "garbageCollected": "70kg"
+  },
+  "recentActivities": [
+    {"type":"Battery","sub":"Normal","status":"75%","time":"Wed, Sep 15 2025 10:45:20 AM"},
+    {"type":"Garbage","sub":"Full","status":"98%","time":"Sun, Sep 12 2025 13:16:16 PM"},
+    {"type":"Location","sub":"Zone A","status":"Completed","time":"Wed, Sep 08 2025 10:15:16 PM"}
+  ]
+}
