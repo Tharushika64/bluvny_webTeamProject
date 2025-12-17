@@ -1,6 +1,6 @@
 function SuperAdminAuth() {
   return (
-    <div className="auth-page">
+    <div className="Signup-container">
       <h2>Super Admin Access</h2>
       <button>Login</button>
       <button>Sign Up</button>

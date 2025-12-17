@@ -10,6 +10,9 @@ import RobotControlPage from './components/RobotControl/RobotControlPanel';
 import SelectDashboard from './pages/SelectDashboard';
 import SuperAdminAuth from './pages/SuperAdminAuth';
 
+import Signup from "./components/Signup/Signup";
+
+
 export default function App() {
   const [activeRoute, setActiveRoute] = useState('alerts');
 
@@ -18,7 +21,8 @@ export default function App() {
       <Routes>
         {/* Public routes */}
         <Route path="/" element={<SelectDashboard />} />
-        <Route path="/super-admin" element={<SuperAdminAuth />} />
+        
+        <Route path="/super-admin" element={<Signup />} />
 
         {/* Protected dashboard routes */}
         <Route
