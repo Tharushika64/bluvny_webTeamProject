@@ -1,0 +1,95 @@
+.select-dashboard-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Left branding panel */
+.left-panel {
+  flex: 1;
+  background: linear-gradient(to bottom, #565d6d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.branding {
+  text-align: center;
+}
+
+.logo {
+  width: 400px;
+  margin-bottom: 1rem;
+}
+
+.branding h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.branding p {
+  font-size: 1rem;
+  color: #cbd5e1;
+}
+
+/* Right dashboard panel */
+.right-panel {
+  flex: 1;
+  background-color: #f9fafb;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-panel h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.right-panel p {
+  color: #6b7280;
+  margin-bottom: 2rem;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.role-card {
+  height: 120px;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.role-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.role-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
+}
+
+footer {
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
