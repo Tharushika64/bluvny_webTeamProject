@@ -9,10 +9,19 @@ import RobotControlPage from './components/RobotControl/RobotControlPanel';
 import OverviewPage from './components/overview/Dashboard';
 
 
+import Signup from "./components/Signup/Signup";
+
+
 export default function App() {
   const [activeRoute, setActiveRoute] = useState('alerts');
 
   return (
+    <Router>
+      <Routes>
+        {/* Public routes */}
+        <Route path="/" element={<SelectDashboard />} />
+        
+        <Route path="/super-admin" element={<Signup />} />
     <div className="app">
       <Sidebar activeRoute={activeRoute} onNavigate={setActiveRoute} />
       <div className="main">
