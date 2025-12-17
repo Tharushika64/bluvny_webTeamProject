@@ -8,7 +8,7 @@ import RobotControlPage from './components/RobotControl/RobotControlPanel';
 import OverviewPage from './components/overview/Dashboard';
 
 import Signup from "./components/Signup/Signup";
-import SelectDashboard from "./pages/SelectDashboard"; // make sure this exists
+import SelectDashboard from "./pages/SelectDashboard";
 
 export default function App() {
   const [activeRoute, setActiveRoute] = useState('alerts');
@@ -20,7 +20,7 @@ export default function App() {
         <Route path="/" element={<SelectDashboard />} />
         <Route path="/super-admin" element={<Signup />} />
 
-        {/* Dashboard layout route */}
+        {/* Dashboard layout route with nested routes */}
         <Route
           path="/dashboard/*"
           element={
@@ -39,7 +39,7 @@ export default function App() {
                     <div className="card">
                       <div className="card-title">Coming soon</div>
                       <p style={{ color: '#9ca3af', marginTop: 6 }}>
-                        This section is a placeholder in the mock.
+                        This section is a placeholder in the mock. 
                       </p>
                     </div>
                   )}
