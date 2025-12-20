@@ -57,11 +57,13 @@ export default function HeaderBar({ activeRoute, onNavigate }) {
         return {
           title: '',
           subtitle: '',
+          
         };
       case 'map':
         return {
-          title: 'MAP View',
-          subtitle: '',
+          title: 'Interactive Map',
+          subtitle: 'Real-time robot location and operational boundaries',
+
         };
       case 'scheduling':
         return {

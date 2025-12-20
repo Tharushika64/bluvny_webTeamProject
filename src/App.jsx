@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { act, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import { useNavigate } from "react-router-dom";
 
@@ -7,6 +7,7 @@ import HeaderBar from './components/alertsDashboard/HeaderBar';
 import AlertsPage from './components/alertsDashboard/AlertsPage';
 import RobotControlPage from './components/RobotControl/RobotControlPanel';
 import OverviewPage from './components/overview/Dashboard';
+import MapView from './components/MapView/MapView';
 
 
 export default function App() {
@@ -20,11 +21,14 @@ export default function App() {
         <div className="content">
           {activeRoute === 'overview' ? (
   <OverviewPage />
-) : activeRoute === 'alerts' ? (
+  ) : activeRoute === 'alerts' ? (
   <AlertsPage />
-) : activeRoute === 'robot' ? (
+  ) : activeRoute === 'robot' ? (
   <RobotControlPage />
-) : (
+  ): activeRoute ==  'map' ? (
+  <MapView/>
+  ):
+(
   <div className="card">
     <div className="card-title">Coming soon</div>
     <p style={{ color: '#9ca3af', marginTop: 6 }}>
