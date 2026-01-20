@@ -1,0 +1,145 @@
+.user-management {
+  padding: 2rem;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.user-management-header {
+  margin-bottom: 2rem;
+}
+
+.user-management-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.user-management-header p {
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+.user-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+}
+
+.user-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.user-card-header {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.user-icon {
+  font-size: 2rem;
+}
+
+.user-card-header h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.user-card-content {
+  padding: 1.5rem;
+}
+
+.user-info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.user-info-row label {
+  color: #374151;
+  font-weight: 500;
+}
+
+.role-badge {
+  background: #93c5fd;
+  color: #1e40af;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status-badge.active {
+  background: #ef4444;
+  color: white;
+}
+
+.last-active {
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1rem 0;
+}
+
+.permissions-section {
+  margin-top: 1rem;
+}
+
+.permissions-section label {
+  display: block;
+  color: #374151;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+.permissions-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.permission-tag {
+  background: #d1d5db;
+  color: #374151;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .user-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-management-header h1 {
+    font-size: 1.5rem;
+  }
+}

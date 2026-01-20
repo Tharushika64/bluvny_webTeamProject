@@ -9,6 +9,7 @@ import OverviewPage from './components/overview/Dashboard';
 import MapView from './components/MapView/MapView';
 import MarketingPage from './pages/MarketingPage';
 import SelectDashboard from './pages/SelectDashboard';
+import UserManagement from './pages/UserManagement';
 
 function Dashboard() {
   const [activeRoute, setActiveRoute] = useState('alerts');
@@ -27,6 +28,8 @@ function Dashboard() {
             <RobotControlPage />
           ) : activeRoute === 'map' ? (
             <MapView />
+          ) : activeRoute === 'users' ? (
+            <UserManagement />
           ) : (
             <div className="card">
               <div className="card-title">Coming soon</div>
