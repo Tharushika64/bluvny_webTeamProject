@@ -1,7 +1,7 @@
 /* About Section Styles */
 .about-section {
-  padding: 5rem 2rem;
-  background: white;
+  padding: 2rem 2rem;
+  background: transparent;
 }
 
 .about-container {
@@ -14,7 +14,7 @@
   font-weight: 700;
   text-align: center;
   color: #1f2937;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-title .highlight {
@@ -25,7 +25,7 @@
   text-align: center;
   color: #6b7280;
   font-size: 1.1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -33,23 +33,32 @@
 
 .who-we-are-label {
   text-align: center;
-  display: inline-block;
-  margin: 0 auto 3rem;
+  display: block;
+  margin: 0 auto 1.5rem;
   background: #f3f4f6;
   padding: 0.5rem 1.5rem;
   border-radius: 2rem;
-  font-weight: 600;
+  font-weight: 800;
+  font-size: 2.1rem;
   color: #374151;
   width: fit-content;
   margin-left: auto;
   margin-right: auto;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.who-we-are-label:hover {
+  background: #e5e7eb;
+  color: #2563eb;
 }
 
 .about-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  margin-top: 3rem;
+  margin-top: 1.5rem;
 }
 
 .about-card {

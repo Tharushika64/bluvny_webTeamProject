@@ -1,6 +1,7 @@
 /* Marketing Page Styles */
 .marketing-page {
   width: 100%;
-  background-color: #f8fafc;
+  background: linear-gradient(180deg, #e0e7ff 0%, #dbeafe 25%, #f8fafc 75%, white 100%);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  min-height: 100vh;
 }

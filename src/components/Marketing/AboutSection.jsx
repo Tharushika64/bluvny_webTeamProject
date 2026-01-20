@@ -11,7 +11,7 @@ export default function AboutSection() {
           We're on a mission to transform how the world manages waste through innovative robotics, artificial intelligence, and sustainable technology.
         </p>
 
-        <div className="who-we-are-label">Who We Are</div>
+        <a href="#about" className="who-we-are-label">About Us</a>
         
         <div className="about-cards">
           <div className="about-card mission-card">

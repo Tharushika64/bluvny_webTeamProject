@@ -27,6 +27,7 @@ export default function ContactSection() {
 
   return (
     <section className="contact-section" id="contact">
+      <a href="#contact" className="contact-label">Contact</a>
       <div className="contact-container">
         <div className="contact-left">
           <h2>Let's talk with us</h2>

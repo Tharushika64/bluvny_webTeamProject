@@ -10,12 +10,13 @@ export default function MarketingHeader() {
       <div className="header-container">
         <div className="logo">
           <img src="/src/assets/logo.png" alt="Bluvyn Logo" />
-          <span>BLUVYN</span>
+          
         </div>
         
         <nav className="nav-menu">
           <a href="#home" className="nav-link">Home</a>
           <a href="#about" className="nav-link">About Us</a>
+          <a href="#benefits" className="nav-link">Benefits</a>
           <a href="#contact" className="nav-link">Contact</a>
         </nav>
         

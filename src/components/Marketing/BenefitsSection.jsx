@@ -26,9 +26,9 @@ export default function BenefitsSection() {
   ];
 
   return (
-    <section className="benefits-section">
+    <section className="benefits-section" id="benefits">
       <div className="benefits-container">
-        <div className="benefits-label">Benefits</div>
+        <a href="#benefits" className="benefits-label">Benefits</a>
         
         <p className="benefits-intro">
           Experience the future of waste management with measurable results and sustainable operations.
