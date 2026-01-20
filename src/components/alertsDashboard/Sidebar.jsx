@@ -1,5 +1,6 @@
 // src/components/Sidebar.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const navItems = [
   { key: 'overview', label: 'Overview', icon: '🔲' },
@@ -15,6 +16,16 @@ const bottomItems = [
 ];
 
 export default function Sidebar({ activeRoute, onNavigate }) {
+  const navigate = useNavigate();
+
+  const handleLogout = (key) => {
+    if (key === 'logout') {
+      navigate('/');
+    } else {
+      onNavigate(key);
+    }
+  };
+
   return (
     <aside className="sidebar">
       <div>
@@ -52,7 +63,7 @@ export default function Sidebar({ activeRoute, onNavigate }) {
           <button
             key={item.key}
             className={activeRoute === item.key ? 'active' : ''}
-            onClick={() => onNavigate(item.key)}
+            onClick={() => handleLogout(item.key)}
           >
             <span className="nav-icon">{item.icon}</span>
             {item.label}

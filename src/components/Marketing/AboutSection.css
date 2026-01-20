@@ -1,0 +1,105 @@
+/* About Section Styles */
+.about-section {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.about-title .highlight {
+  color: #2563eb;
+}
+
+.about-subtitle {
+  text-align: center;
+  color: #6b7280;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.who-we-are-label {
+  text-align: center;
+  display: inline-block;
+  margin: 0 auto 3rem;
+  background: #f3f4f6;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  color: #374151;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.about-card {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: #2563eb;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.1);
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 1rem 0 1rem 0;
+}
+
+.about-card p {
+  color: #6b7280;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+}
+
+.mission-card {
+  border-left: 4px solid #2563eb;
+}
+
+.vision-card {
+  border-left: 4px solid #10b981;
+}
+
+@media (max-width: 768px) {
+  .about-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-section {
+    padding: 3rem 1rem;
+  }
+}
