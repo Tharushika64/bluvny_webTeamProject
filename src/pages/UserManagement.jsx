@@ -15,7 +15,7 @@ export default function UserManagement() {
     },
     {
       id: 2,
-      name: 'Admin User',
+      name: 'Admin',
       icon: '👤',
       role: 'Administrator',
       status: 'Active',
@@ -25,7 +25,7 @@ export default function UserManagement() {
     },
     {
       id: 3,
-      name: 'Normal User',
+      name: 'User',
       icon: '👤',
       role: 'Operator',
       status: 'Active',
@@ -35,7 +35,7 @@ export default function UserManagement() {
     },
     {
       id: 4,
-      name: 'Visit User',
+      name: 'Viewer',
       icon: '👁️',
       role: 'Visitor',
       status: 'Active',

@@ -12,7 +12,7 @@ import SelectDashboard from './pages/SelectDashboard';
 import UserManagement from './pages/UserManagement';
 
 function Dashboard() {
-  const [activeRoute, setActiveRoute] = useState('alerts');
+  const [activeRoute, setActiveRoute] = useState('overview');
 
   return (
     <div className="app">
