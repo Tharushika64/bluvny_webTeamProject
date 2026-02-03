@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
-const Login: React.FC = () => {
+const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
     console.log('Login attempt:', { email, password });
+    // Redirect to overview page after successful login
+    setTimeout(() => {
+      navigate('/super-admin');
+    }, 300);
   };
-    // SVG Icons
+
+  // SVG Icons
   const EmailIcon = () => (
     <svg 
       className="form-label-icon" 
@@ -43,10 +50,9 @@ const Login: React.FC = () => {
 
   return (
     <div className="login-container">
-      
-        <div className="robo-login-card">
+      <div className="robo-login-card">
         <img src='src\assets\images\LoginRobot.png' alt='robot' className='robot-image'></img>
-       </div>
+      </div>
      
       <div className="login-card-wrapper">
         <div className="login-card">
@@ -54,10 +60,10 @@ const Login: React.FC = () => {
           
           <form onSubmit={handleSubmit} className="login-form">
             <div className="form-group">
-                <div className="label-with-icon">
-                  <label htmlFor="email" className="form-label">Email</label>
-                  <EmailIcon />
-                </div>
+              <div className="label-with-icon">
+                <label htmlFor="email" className="form-label">Email</label>
+                <EmailIcon />
+              </div>
               <input
                 type="email"
                 id="email"
@@ -65,17 +71,14 @@ const Login: React.FC = () => {
                 onChange={(e) => setEmail(e.target.value)}
                 className="form-input"
                 required
-                
               />
-            
             </div>
 
             <div className="form-group">
-                             <div className="label-with-icon">
-                  
-                  <label htmlFor="password" className="form-label">Password</label>
-                  <PasswordIcon />
-                </div>
+              <div className="label-with-icon">
+                <label htmlFor="password" className="form-label">Password</label>
+                <PasswordIcon />
+              </div>
               <input
                 type="password"
                 id="password"
@@ -96,10 +99,8 @@ const Login: React.FC = () => {
             <a href="/forgot-password" className="footer-link">Forgot password?</a>
           </div>
         </div>
-         </div>
-        </div>
-     
-    
+      </div>
+    </div>
   );
 };
 

@@ -16,7 +16,7 @@ function SelectDashboard() {
       label: "Super Admin",
       image: superAdminImg,
       color: "#a3baf5ff",
-      path: "/super-admin",
+      path: "/login",
     },
     {
       label: "Admin",

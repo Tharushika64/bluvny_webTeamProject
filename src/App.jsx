@@ -11,6 +11,8 @@ import SchedulePage from './components/schedule/SchedulePage';
 import MarketingPage from './pages/MarketingPage';
 import SelectDashboard from './pages/SelectDashboard';
 import UserManagement from './pages/UserManagement';
+import Login from './components/Login/Login.jsx';
+import Signup from './components/Signup/Signup.jsx';
 
 function Dashboard() {
   const [activeRoute, setActiveRoute] = useState('overview');
@@ -53,6 +55,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<MarketingPage />} />
         <Route path="/select-dashboard" element={<SelectDashboard />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/super-admin" element={<Dashboard />} />
         <Route path="/admin" element={<Dashboard />} />
         <Route path="/user" element={<Dashboard />} />
