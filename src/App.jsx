@@ -7,6 +7,7 @@ import AlertsPage from './components/alertsDashboard/AlertsPage';
 import RobotControlPage from './components/RobotControl/RobotControlPanel';
 import OverviewPage from './components/overview/Dashboard';
 import MapView from './components/MapView/MapView';
+import SchedulePage from './components/schedule/SchedulePage';
 import MarketingPage from './pages/MarketingPage';
 import SelectDashboard from './pages/SelectDashboard';
 import UserManagement from './pages/UserManagement';
@@ -28,6 +29,8 @@ function Dashboard() {
             <RobotControlPage />
           ) : activeRoute === 'map' ? (
             <MapView />
+          ) : activeRoute === 'scheduling' ? (
+            <SchedulePage />
           ) : activeRoute === 'users' ? (
             <UserManagement />
           ) : (
