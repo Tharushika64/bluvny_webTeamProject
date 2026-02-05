@@ -5,7 +5,7 @@
 }
 
 .benefits-container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -30,8 +30,6 @@
 .benefits-label:hover {
   background: #e5e7eb;
   color: #2563eb;
-}
-  margin: 0 auto 2rem;
 }
 
 .benefits-intro {
@@ -104,11 +102,11 @@
   .benefits-image-section {
     grid-template-columns: 1fr;
   }
-  
+
   .benefits-image {
     transform: none;
   }
-  
+
   .benefits-section {
     padding: 3rem 1rem;
   }
