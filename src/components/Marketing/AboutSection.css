@@ -5,7 +5,7 @@
 }
 
 .about-container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -103,11 +103,11 @@
   .about-cards {
     grid-template-columns: 1fr;
   }
-  
+
   .about-title {
     font-size: 2rem;
   }
-  
+
   .about-section {
     padding: 3rem 1rem;
   }

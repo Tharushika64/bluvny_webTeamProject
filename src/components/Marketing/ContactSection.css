@@ -28,7 +28,7 @@
 }
 
 .contact-container {
-  max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -158,11 +158,11 @@
   .contact-container {
     grid-template-columns: 1fr;
   }
-  
+
   .contact-section {
     padding: 3rem 1rem;
   }
-  
+
   .contact-left h2 {
     font-size: 1.5rem;
   }
