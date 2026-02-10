@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
+import robotImg from '../../assets/images/LoginRobot.png';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -51,7 +52,7 @@ const Login = () => {
   return (
     <div className="login-container">
       <div className="robo-login-card">
-        <img src='src\assets\images\LoginRobot.png' alt='robot' className='robot-image'></img>
+        <img src={robotImg} alt='robot' className='robot-image' />
       </div>
      
       <div className="login-card-wrapper">
@@ -60,10 +61,10 @@ const Login = () => {
           
           <form onSubmit={handleSubmit} className="login-form">
             <div className="form-group">
-              <div className="label-with-icon">
-                <label htmlFor="email" className="form-label">Email</label>
+              <label htmlFor="email" className="form-label">
+                Email
                 <EmailIcon />
-              </div>
+              </label>
               <input
                 type="email"
                 id="email"
@@ -75,10 +76,10 @@ const Login = () => {
             </div>
 
             <div className="form-group">
-              <div className="label-with-icon">
-                <label htmlFor="password" className="form-label">Password</label>
+              <label htmlFor="password" className="form-label">
+                Password
                 <PasswordIcon />
-              </div>
+              </label>
               <input
                 type="password"
                 id="password"
