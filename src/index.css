@@ -31,14 +31,21 @@ body {
 }
 
 .sidebar {
-  background: #0f2a57; /* deep blue */
+background: #0f2a57; /* deep blue */
   color: #ffffff;
   border-right: 1px solid #fdfdfd;
   padding: 24px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  
+  height: 100vh;
+  left: 0;
+  top: 0;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  
+  
 }
 
 .section-label {
