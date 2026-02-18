@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams, Link } from 'react-router-dom';
 import './Login.css';
 import robotImg from '../../assets/images/LoginRobot.png';
 
@@ -7,26 +7,36 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const role = searchParams.get('role') || 'super-admin';
+
+  // Map role to its dashboard route
+  const roleRoutes = {
+    'super-admin': '/super-admin',
+    'admin': '/admin',
+    'normal-user': '/user',
+    'user': '/viewer',
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle login logic here
-    console.log('Login attempt:', { email, password });
-    // Redirect to overview page after successful login
+    console.log('Login attempt:', { email, password, role });
+    // Redirect to the correct dashboard based on role
     setTimeout(() => {
-      navigate('/super-admin');
+      navigate(roleRoutes[role] || '/super-admin');
     }, 300);
   };
 
   // SVG Icons
   const EmailIcon = () => (
-    <svg 
-      className="form-label-icon" 
-      width="16" 
-      height="16" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
+    <svg
+      className="form-label-icon"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
       strokeWidth="2"
     >
       <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -35,13 +45,13 @@ const Login = () => {
   );
 
   const PasswordIcon = () => (
-    <svg 
-      className="form-label-icon" 
-      width="16" 
-      height="16" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
+    <svg
+      className="form-label-icon"
+      width="16"
+      height="16"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
       strokeWidth="2"
     >
       <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
@@ -54,11 +64,11 @@ const Login = () => {
       <div className="robo-login-card">
         <img src={robotImg} alt='robot' className='robot-image' />
       </div>
-     
+
       <div className="login-card-wrapper">
         <div className="login-card">
           <h2 className="login-title">Login</h2>
-          
+
           <form onSubmit={handleSubmit} className="login-form">
             <div className="form-group">
               <label htmlFor="email" className="form-label">
@@ -96,8 +106,8 @@ const Login = () => {
           </form>
 
           <div className="login-footer">
-            <a href="/signup" className="footer-link">Create an account</a>
-            <a href="/forgot-password" className="footer-link">Forgot password?</a>
+            <Link to="/signup" className="footer-link">Create an account</Link>
+            <Link to="/forgot-password" className="footer-link">Forgot password?</Link>
           </div>
         </div>
       </div>

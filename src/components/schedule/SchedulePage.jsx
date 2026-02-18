@@ -4,7 +4,7 @@ import QuickStats from './QuickStats';
 import AllSchedules from './AllSchedules';
 import './schedule.css';
 
-export default function SchedulePage() {
+export default function SchedulePage({ role = 'super-admin' }) {
   const [schedules, setSchedules] = useState([]);
   const [showNewScheduleModal, setShowNewScheduleModal] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -54,13 +54,13 @@ export default function SchedulePage() {
         isActive: true
       }
     ];
-    
+
     setSchedules(mockSchedules);
     setLoading(false);
   }, []);
 
   const todaySchedules = schedules.slice(0, 3);
-  
+
   const stats = {
     totalSchedules: schedules.length,
     activeToday: schedules.filter(s => s.status === 'Completed' || s.status === 'Active').length,
@@ -96,10 +96,12 @@ export default function SchedulePage() {
           <h1>Scheduling Operations</h1>
           <p className="subtitle">Manage robot operation schedules and timings</p>
         </div>
-        <button className="btn-new-schedule" onClick={handleNewSchedule}>
-          <span className="btn-icon">+</span>
-          New Schedule
-        </button>
+        {role !== 'normal-user' && (
+          <button className="btn-new-schedule" onClick={handleNewSchedule}>
+            <span className="btn-icon">+</span>
+            New Schedule
+          </button>
+        )}
       </div>
 
       <div className="schedule-content">
@@ -113,8 +115,8 @@ export default function SchedulePage() {
       </div>
 
       {showNewScheduleModal && (
-        <NewScheduleModal 
-          onClose={handleCloseModal} 
+        <NewScheduleModal
+          onClose={handleCloseModal}
           onSave={handleSaveSchedule}
         />
       )}
@@ -165,7 +167,7 @@ function NewScheduleModal({ onClose, onSave }) {
           <h2>Create New Schedule</h2>
           <button className="btn-close" onClick={onClose}>×</button>
         </div>
-        
+
         <form onSubmit={handleSubmit} className="modal-form">
           <div className="form-group">
             <label>Zone</label>
