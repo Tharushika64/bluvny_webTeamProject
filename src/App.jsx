@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"; 
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 
 import Sidebar from './components/alertsDashboard/Sidebar';
 import HeaderBar from './components/alertsDashboard/HeaderBar';
@@ -13,15 +13,16 @@ import SelectDashboard from './pages/SelectDashboard';
 import UserManagement from './pages/UserManagement';
 import Login from './components/Login/Login.jsx';
 import Signup from './components/Signup/Signup.jsx';
+import ForgotPassword from './components/Login/ForgotPassword.jsx';
 
-function Dashboard() {
+function Dashboard({ role = 'super-admin' }) {
   const [activeRoute, setActiveRoute] = useState('overview');
 
   return (
     <div className="app">
-      <Sidebar activeRoute={activeRoute} onNavigate={setActiveRoute} />
+      <Sidebar activeRoute={activeRoute} onNavigate={setActiveRoute} role={role} />
       <div className="main">
-        <HeaderBar activeRoute={activeRoute} />
+        <HeaderBar activeRoute={activeRoute} role={role} />
         <div className="content">
           {activeRoute === 'overview' ? (
             <OverviewPage />
@@ -32,7 +33,7 @@ function Dashboard() {
           ) : activeRoute === 'map' ? (
             <MapView />
           ) : activeRoute === 'scheduling' ? (
-            <SchedulePage />
+            <SchedulePage role={role} />
           ) : activeRoute === 'users' ? (
             <UserManagement />
           ) : (
@@ -57,10 +58,11 @@ export default function App() {
         <Route path="/select-dashboard" element={<SelectDashboard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/super-admin" element={<Dashboard />} />
-        <Route path="/admin" element={<Dashboard />} />
-        <Route path="/user" element={<Dashboard />} />
-        <Route path="/viewer" element={<Dashboard />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/super-admin" element={<Dashboard role="super-admin" />} />
+        <Route path="/admin" element={<Dashboard role="admin" />} />
+        <Route path="/user" element={<Dashboard role="normal-user" />} />
+        <Route path="/viewer" element={<Dashboard role="user" />} />
       </Routes>
     </Router>
   );

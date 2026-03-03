@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import avatarSvg from '../../assets/avatar.svg';
+import { ROLE_LABELS } from '../../config/rolePermissions';
 
-export default function HeaderBar({ activeRoute, onNavigate }) {
+export default function HeaderBar({ activeRoute, onNavigate, role = 'super-admin' }) {
+  const roleLabel = ROLE_LABELS[role] || 'Super Admin';
   // Try to load a real uploaded photo first (place a file at src/assets/avatar.jpg)
   const [imgSrc, setImgSrc] = useState('/src/assets/avatar.jpg');
   const [imgError, setImgError] = useState(false);
@@ -57,7 +59,7 @@ export default function HeaderBar({ activeRoute, onNavigate }) {
         return {
           title: '',
           subtitle: '',
-          
+
         };
       case 'map':
         return {
@@ -88,7 +90,7 @@ export default function HeaderBar({ activeRoute, onNavigate }) {
   return (
     <header className="header">
       <div>
-        <div className="welcome">Welcome back, <strong>Super Admin</strong></div>
+        <div className="welcome">Welcome back, <strong>{roleLabel}</strong></div>
         {title ? <div className="title">{title}</div> : null}
         {subtitle ? <div className="subtitle">{subtitle}</div> : null}
       </div>
@@ -131,17 +133,17 @@ export default function HeaderBar({ activeRoute, onNavigate }) {
           role="button"
           tabIndex={0}
           aria-label="Open user profile"
-          onClick={() => onNavigate ? onNavigate('users') : null}
+          onClick={() => (role === 'super-admin' && onNavigate) ? onNavigate('users') : null}
           onKeyDown={(e) => {
             if (e.key === 'Enter' || e.key === ' ') {
               e.preventDefault();
-              onNavigate ? onNavigate('users') : null;
+              if (role === 'super-admin' && onNavigate) onNavigate('users');
             }
           }}
         >
           <div className="user-info">
             <div className="user-name">Jude Perera</div>
-            <div className="user-role">Super Admin</div>
+            <div className="user-role">{roleLabel}</div>
           </div>
           <div className="avatar">
             {!imgError ? (

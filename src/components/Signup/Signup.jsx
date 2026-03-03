@@ -8,7 +8,6 @@ const Signup = () => {
     username: "",
     email: "",
     password: "",
-    confirmPassword: "",
   });
 
   const navigate = useNavigate();
@@ -23,16 +22,11 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Validate passwords match
-    if (formData.password !== formData.confirmPassword) {
-      console.log("Passwords do not match");
-      return;
-    }
-
     console.log("Form submitted:", formData);
-    // Navigate to the dashboard or login page after successful signup
-    navigate("/login");
+    // Navigate to login page after successful signup
+    setTimeout(() => {
+      navigate("/login");
+    }, 300);
   };
 
   // SVG Icons
@@ -83,20 +77,16 @@ const Signup = () => {
 
   return (
     <div className="signup-container">
-      <div className="robo-signup-card">
-        <img src={robotImg} alt="robot" className="robot-image"></img>
-      </div>
-
       <div className="signup-card-wrapper">
         <div className="signup-card">
           <h2 className="signup-title">Sign Up</h2>
 
           <form onSubmit={handleSubmit} className="signup-form">
             <div className="form-group">
-              <div className="label-with-icon">
-                <label htmlFor="username" className="form-label">Username</label>
+              <label htmlFor="username" className="form-label">
+                Username
                 <UserIcon />
-              </div>
+              </label>
               <input
                 type="text"
                 id="username"
@@ -110,10 +100,10 @@ const Signup = () => {
             </div>
 
             <div className="form-group">
-              <div className="label-with-icon">
-                <label htmlFor="email" className="form-label">Email</label>
+              <label htmlFor="email" className="form-label">
+                Email
                 <EmailIcon />
-              </div>
+              </label>
               <input
                 type="email"
                 id="email"
@@ -127,10 +117,10 @@ const Signup = () => {
             </div>
 
             <div className="form-group">
-              <div className="label-with-icon">
-                <label htmlFor="password" className="form-label">Password</label>
+              <label htmlFor="password" className="form-label">
+                Password
                 <PasswordIcon />
-              </div>
+              </label>
               <input
                 type="password"
                 id="password"
@@ -143,35 +133,22 @@ const Signup = () => {
               />
             </div>
 
-            <div className="form-group">
-              <div className="label-with-icon">
-                <label htmlFor="confirmPassword" className="form-label">Confirm Password</label>
-                <PasswordIcon />
-              </div>
-              <input
-                type="password"
-                id="confirmPassword"
-                name="confirmPassword"
-                placeholder="Confirm your password"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                className="form-input"
-                required
-              />
-            </div>
-
             <button type="submit" className="signup-button">
               Sign Up
             </button>
           </form>
 
           <div className="signup-footer">
-            <p className="signup-text">
-              Already have an account? 
-              <a href="/login" className="footer-link">Login here</a>
-            </p>
+            <span className="footer-text">
+              Already have an account?
+            </span>
+            <a href="/login" className="footer-link">Login here</a>
           </div>
         </div>
+      </div>
+
+      <div className="robo-signup-card">
+        <img src={robotImg} alt="robot" className="Sign-robot-image"></img>
       </div>
     </div>
   );

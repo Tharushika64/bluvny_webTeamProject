@@ -16,25 +16,25 @@ function SelectDashboard() {
       label: "Super Admin",
       image: superAdminImg,
       color: "#a3baf5ff",
-      path: "/login",
+      path: "/login?role=super-admin",
     },
     {
       label: "Admin",
       image: adminImg,
       color: "#da6ea4ff",
-      path: null,
+      path: "/login?role=admin",
     },
     {
       label: "Normal User",
       image: normalUserImg,
       color: "#ebb557ff",
-      path: null,
+      path: "/login?role=normal-user",
     },
     {
       label: "User",
       image: userImg,
       color: "#38b48bff",
-      path: null,
+      path: "/viewer",
     },
   ];
 
@@ -45,7 +45,7 @@ function SelectDashboard() {
         <div className="left-panel">
           <div className="branding">
             <img src={logoImg} alt="BLUVYN Logo" className="logo" />
-            
+
           </div>
         </div>
 
