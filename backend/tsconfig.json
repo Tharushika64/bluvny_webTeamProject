@@ -1,30 +1,11 @@
 {
   "compilerOptions": {
-    // 1️⃣ File Layout
-    "rootDir": "./src",      // source folder
-    "outDir": "./dist",      // compiled JS output
-
-    // 2️⃣ Module + Target
-    "module": "commonjs",    // standard Node.js module
-    "target": "es2019",      // modern Node.js supports ES2019+
-
-    // 3️⃣ Node.js Environment
-    "lib": ["es2019"],
-    "types": ["node"],
-
-    // 4️⃣ Source Maps & Declarations
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-
-    // 5️⃣ Strict Type Checking
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-
-    // 6️⃣ Module Handling
+    "target": "ES2020",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "strict": true,
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
